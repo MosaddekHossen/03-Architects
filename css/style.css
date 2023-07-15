@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Work+Sans:wght@300;400;500;600;700&display=swap');
 
 /* ==================== */
-/* Basic setup */
+/* Shared style */
 /* ==================== */
 
 * {
@@ -14,6 +14,16 @@
     box-sizing: border-box;
     font-family: 'Open Sans', sans-serif;
     font-family: 'Work Sans', sans-serif;
+}
+
+.btn-primary {
+    border-radius: 8px;
+    background: #FF900E;
+    padding: 20px 25px;
+    font-size: 1.25rem;
+    color: #fff;
+    cursor: pointer;
+    border: 0;
 }
 
 /* ==================== */
@@ -71,6 +81,75 @@ nav li a {
 
 .banner-description {
     color: #727272;
-    font-size: 1rem;
-    font-weight: 400;
+    /* font-size: 1rem; */
+}
+
+.banner img {
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* ==================== */
+/* Responsive styles */
+/* ==================== */
+/* Mobile devices */
+/* ========================== */
+@media screen and (max-width: 576px) {
+    header {
+        padding: 20px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+}
+
+/* ========================== */
+/* Tablet or medium devices */
+/* ========================== */
+@media screen and (min-width: 576px) and (max-width: 960px) {
+    header {
+        padding: 50px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+}
+
+/* ========================== */
+/* Main styles */
+/* ========================== */
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.teams-container {
+    display: flex;
+    align-items: center;
+}
+
+.teams-img-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.teams-content {
+    padding: 0 70px;
+}
+
+.teams-title {
+    font-size: 2.8rem;
+}
+
+.teams-title .quick-list {
+    color: #727272;
+    font-weight: 500;
+}
+
+.teams-title .text-features {
+    color: #FF900E;
+    font-weight: 700;
 }
